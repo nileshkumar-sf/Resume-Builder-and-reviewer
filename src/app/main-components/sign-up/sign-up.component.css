@@ -1,0 +1,14 @@
+.displayTable {
+    color: white;
+}
+
+button, input[type="button"] {
+    background-color: #4CAF50;
+    /* color: var(--color-primary); */
+    /* padding: 14px 20px; */
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+

@@ -1,0 +1,46 @@
+button {
+    background-color: #4CAF50;
+    color: var(--color-primary);
+    padding: 14px 20px;
+    margin: 10px 0;
+    width: 40vw;
+    min-width: fit-content;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.9;
+    bottom: -18rem;
+    position: relative;
+    font-size: max(1.2vw, 0.9rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    top: -100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    max-height: 45%;
+    max-width: 30%;
+    min-height: 45%;
+    min-width: 60%;
+    background-image: url(../../../assets/_logo_.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 20px;
+    border-radius: 3vw;
+}
