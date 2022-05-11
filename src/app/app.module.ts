@@ -19,6 +19,7 @@ import { VerifyEmailComponent } from './main-components/verify-email/verify-emai
 import { AuthService } from './shared/services/auth.service';
 import { HomePageComponent } from './main-components/home-page/home-page.component';
 import { HeaderComponent } from './general-components/header/header.component';
+import { FooterComponent } from './general-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HeaderComponent } from './general-components/header/header.component';
     VerifyEmailComponent,
     HomePageComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

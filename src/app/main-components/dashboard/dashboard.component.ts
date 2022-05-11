@@ -7,6 +7,8 @@ import { AuthService } from '../../shared/services/auth.service';
 })
 export class DashboardComponent implements OnInit {
   constructor(public authService: AuthService) {
+    // console.log(authService.userData.photoURL);
+    
   }
   ngOnInit(): void {}
 }
