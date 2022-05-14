@@ -1,0 +1,52 @@
+<!-- <p>resume-reviewer works!</p> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header" *ngIf="!submitted">
+          <h4 class="card-title">Resume Reviewer</h4>
+
+          <div class="form-group">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+              <label for="resume">Upload Resume</label>
+              <input
+                type="file"
+                class="form-control"
+                id="resume"
+                name="resume"
+                (change)="selectFile($event)"
+                required
+              />
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="!selectedFiles"
+              >
+                Submit
+              </button>
+
+              <!-- <div *ngIf="currentFileUpload" class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  [ngStyle]="{ width: percentage + '%' }"
+                >
+                  {{ percentage }}%
+                </div>
+              </div> -->
+            </form>
+          </div>
+        </div>
+        <div class="card-header bg-success" *ngIf="submitted">
+          <h4 class="card-title">Resume Reviewer</h4>
+          <p>
+            Thank you for submitting your resume. We will review your resume and
+            get back to you shortly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,4 @@
 :root {
     --color-primary: #280a50;
     --color-secondary: #cd8eff;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-}
-
-footer {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: relative;
-    width: 100%;
-    padding: 1vw;
 }

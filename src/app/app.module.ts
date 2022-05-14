@@ -20,6 +20,8 @@ import { AuthService } from './shared/services/auth.service';
 import { HomePageComponent } from './main-components/home-page/home-page.component';
 import { HeaderComponent } from './general-components/header/header.component';
 import { FooterComponent } from './general-components/footer/footer.component';
+import { ResumeReviewerComponent } from './main-components/resume-reviewer/resume-reviewer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,11 @@ import { FooterComponent } from './general-components/footer/footer.component';
     HomePageComponent,
     HeaderComponent,
     FooterComponent,
+    ResumeReviewerComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

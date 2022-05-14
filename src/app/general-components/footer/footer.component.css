@@ -1,6 +1,5 @@
 footer {
     text-align: center;
     font-size: 1rem;
-    color: var(--color-secondary);
-    position: absolute;
+    padding: 1rem;
 } 

@@ -119,9 +119,11 @@ export class AuthService {
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
     };
+    console.log(user);
+    
     return userRef.set(userData, {
       merge: true,
-    });
+    });    
   }
   // Sign out
   SignOut() {

@@ -1,10 +1,5 @@
 .navbar {
-    width: 100%;
-    margin: 20px 0 0 0;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    margin-top: 20px;
 }
 
 .navbar .navbar-title a {
@@ -14,9 +9,7 @@
 }
 
 .navbar .navbar-title a h2 {
-    /* font-size: min(max(calc(1rem + 1vw), 1.5rem), 2rem); */
     font-size: max(4vw, 30px);
     font-weight: bold;
-    margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }

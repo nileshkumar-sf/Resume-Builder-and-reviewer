@@ -8,6 +8,7 @@ import { VerifyEmailComponent } from './main-components/verify-email/verify-emai
 // route guard
 import { AuthGuard } from './shared/guard/auth.guard';
 import { HomePageComponent } from './main-components/home-page/home-page.component';
+import { ResumeReviewerComponent } from './main-components/resume-reviewer/resume-reviewer.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
+  { path: 'resume-reviewer', component: ResumeReviewerComponent, canActivate: [AuthGuard] }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
