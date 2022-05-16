@@ -1,0 +1,22 @@
+.container {
+    width: 60vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-heading h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.panel-heading .go-back {
+    float: left;
+}

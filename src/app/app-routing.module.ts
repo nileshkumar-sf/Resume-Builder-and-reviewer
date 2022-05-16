@@ -9,15 +9,17 @@ import { VerifyEmailComponent } from './main-components/verify-email/verify-emai
 import { AuthGuard } from './shared/guard/auth.guard';
 import { HomePageComponent } from './main-components/home-page/home-page.component';
 import { ResumeReviewerComponent } from './main-components/resume-reviewer/resume-reviewer.component';
+import { ResumeBuilderComponent } from './main-components/resume-builder/resume-builder.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'sign-in', component: SignInComponent },
-  { path: 'sign-up', component: SignUpComponent },
+  { path: 'sign-up', component: SignUpComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'resume-reviewer', component: ResumeReviewerComponent, canActivate: [AuthGuard] }
+  { path: 'resume-reviewer', component: ResumeReviewerComponent, canActivate: [AuthGuard] },
+  { path: 'resume-builder', component: ResumeBuilderComponent, canActivate: [AuthGuard] },  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

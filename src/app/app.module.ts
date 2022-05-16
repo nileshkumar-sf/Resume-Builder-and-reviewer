@@ -22,7 +22,8 @@ import { HeaderComponent } from './general-components/header/header.component';
 import { FooterComponent } from './general-components/footer/footer.component';
 import { ResumeReviewerComponent } from './main-components/resume-reviewer/resume-reviewer.component';
 import { FormsModule } from '@angular/forms';
-
+import { ResumeBuilderComponent } from './main-components/resume-builder/resume-builder.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ResumeReviewerComponent,
+    ResumeBuilderComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,13 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
