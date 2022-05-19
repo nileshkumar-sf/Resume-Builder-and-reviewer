@@ -1,0 +1,15 @@
+<app-basic-details
+  *ngIf="showBasicDetails"
+  [(basicDetails)]="basicDetails"
+  (basicDetailsChange)="basicDetailsChange($event)"
+></app-basic-details>
+<div class="educationDetails" *ngIf="showEducationDetails">
+  <app-education-details
+    [(educationDetails)]="educationDetails"
+    (educationDetailsChange)="educationDetailsChange($event)"
+  ></app-education-details>
+  <div class="add-and-delete-buttons">
+    <button type="add-new-section" onClick="">Add a new section</button>
+    <button type="add-new-section" onClick="">Delete the last section</button>
+  </div>
+</div>
