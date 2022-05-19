@@ -24,6 +24,11 @@ import { ResumeReviewerComponent } from './main-components/resume-reviewer/resum
 import { FormsModule } from '@angular/forms';
 import { ResumeBuilderComponent } from './main-components/resume-builder/resume-builder.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { BasicDetailsComponent } from './main-components/resume-builder/basic-details/basic-details.component';
+import { WorkDetailsComponent } from './main-components/resume-builder/work-details/work-details.component';
+import { EducationDetailsComponent } from './main-components/resume-builder/education-details/education-details.component';
+import { SkillsDetailsComponent } from './main-components/resume-builder/skills-details/skills-details.component';
+import { CertificationDetailsComponent } from './main-components/resume-builder/certification-details/certification-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +42,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     FooterComponent,
     ResumeReviewerComponent,
     ResumeBuilderComponent,
+    BasicDetailsComponent,
+    WorkDetailsComponent,
+    EducationDetailsComponent,
+    SkillsDetailsComponent,
+    CertificationDetailsComponent,
   ],
   imports: [
     BrowserModule,

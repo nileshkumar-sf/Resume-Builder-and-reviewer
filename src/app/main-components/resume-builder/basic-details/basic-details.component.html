@@ -1,0 +1,173 @@
+<!-- <p>basic-details works!</p> -->
+
+<div class="common-section">
+    <div class="common-container">
+      <div class="form-container">
+        <h2>Let's start with some basic details about you...</h2>
+        <form>
+          <div class="form-section">
+            <div class="form_group field">
+              <label for="firstName" class="form_label">
+                First Name
+              </label>
+              <input
+                class="form_field"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                type="text"
+                [(ngModel)]="basicDetails.firstName"
+                required
+              />
+            </div>
+            <div class="form_group field">
+              <label for="lastName" class="form_label"> Last Name </label>
+              <input
+                class="form_field"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                type="text"
+                [(ngModel)]="basicDetails.lastName"
+                required
+              />
+            </div>
+          </div>
+  
+          <div class="form-section three-in-a-row">
+            <div class="form_group field">
+              <label for="profession" class="form_label">
+                Profession
+              </label>
+              <input
+                class="form_field"
+                placeholder="Profession"
+                name="profession"
+                id="profession"
+                type="text"
+                [(ngModel)]="basicDetails.profession"
+                required
+              />
+            </div>
+            <div class="form_group field">
+              <label for="city" class="form_label"> City </label>
+              <input
+                class="form_field"
+                placeholder="City"
+                name="city"
+                id="city"
+                type="text"
+                [(ngModel)]="basicDetails.city"
+                required
+              />
+            </div>
+            <div class="form_group field">
+              <label for="country" class="form_label"> Country </label>
+              <input
+                class="form_field"
+                placeholder="Country"
+                name="country"
+                id="country"
+                type="text"
+                [(ngModel)]="basicDetails.country"
+                required
+              />
+            </div>
+          </div>
+  
+          <div class="form-section">
+            <div class="form_group field">
+              <label for="pincode" class="form_label">
+                Pincode/Zip
+              </label>
+              <input
+                class="form_field"
+                placeholder="Pincode/Zip"
+                name="pincode"
+                id="pincode"
+                type="text"
+                [(ngModel)]="basicDetails.pincode"
+                required
+              />
+            </div>
+            <div class="form_group field">
+              <label for="phone" class="form_label"> Phone No. </label>
+              <input
+                class="form_field"
+                placeholder="Phone No."
+                name="phone"
+                id="phone"
+                type="text"
+                [(ngModel)]="basicDetails.phone"
+                required
+              />
+            </div>
+          </div>
+  
+          <div class="form-section">
+            <div class="form_group field">
+              <label for="email" class="form_label"> Email </label>
+              <input
+                class="form_field"
+                placeholder="Email"
+                name="email"
+                id="email"
+                type="email"
+                [(ngModel)]="basicDetails.email"
+                required
+              />
+            </div>
+            <div class="form_group field">
+              <label for="github" class="form_label">
+                Github (Optional)
+              </label>
+              <input
+                class="form_field"
+                placeholder="Github (Optional)"
+                name="github"
+                id="github"
+                type="text"
+                [(ngModel)]="basicDetails.github"
+              />
+            </div>
+          </div>
+  
+          <div class="form-section">
+            <div class="form_group field">
+              <label for="linkedin" class="form_label">
+                LinkedIn (Optional)
+              </label>
+              <input
+                class="form_field"
+                placeholder="LinkedIn (Optional)"
+                name="linkedin"
+                id="linkedin"
+                type="text"
+                [(ngModel)]="basicDetails.linkedin"
+              />
+            </div>
+            <div class="form_group field">
+              <label for="twitter" class="form_label">
+                Twitter (Optional)
+              </label>
+              <input
+                class="form_field"
+                placeholder="Twitter (Optional)"
+                name="twitter"
+                id="twitter"
+                type="text"
+                [(ngModel)]="basicDetails.twitter"
+              />
+            </div>
+            <div class="form_group field">
+              <button class="form_button" type="submit" (click)=onBasicDetailsSubmit()>
+                Next
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
