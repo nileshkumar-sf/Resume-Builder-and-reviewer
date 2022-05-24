@@ -36,7 +36,7 @@ export class GenerateResumeComponent implements OnInit {
     const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
 
     pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save("print.pdf");
+    pdf.save(this.basicDetails.firstName+  "_" +this.basicDetails.lastName +  "_" + "Resume.pdf");
   }
 
 }

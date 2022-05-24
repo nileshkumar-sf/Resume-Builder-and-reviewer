@@ -9,28 +9,28 @@ import { Router } from '@angular/router';
 export class ResumeBuilderComponent implements OnInit {
 
   basicDetails = {
-    firstName: "Nilesh",
-    lastName: "Kumar",
-    profession: "Software Developer",
-    city: "Hardoi",
-    country: "India",
-    pincode: "241126",
-    phone: "+916394716607",
-    email: "nileshkr9919@gmail.com",
-    github: "https://github.com/nileshkr9919",
-    linkedin: "https://www.linkedin.com/in/nilesh-kr/",
-    twitter: "https://twitter.com/nileshkr9919",
+    firstName: "",
+    lastName: "",
+    profession: "",
+    city: "",
+    country: "",
+    pincode: "",
+    phone: "",
+    email: "",
+    github: "",
+    linkedin: "",
+    twitter: "",
   }
 
   workDetails = [
     {
       id: 1,
-      jobTitle: "FS Trainee",
-      employer: "Sourcefuse Technologies",
-      city: "Remote",
-      country: "India",
-      startDate: "01/2022",
-      endDate: "Present",
+      jobTitle: "",
+      employer: "",
+      city: "",
+      country: "",
+      startDate: "",
+      endDate: "",
       jobDescription: "",
     }
   ]
@@ -38,12 +38,12 @@ export class ResumeBuilderComponent implements OnInit {
   educationDetails = [
     {
       id: 1,
-      schoolName: "University of Lucknow",
-      schoolLocation: "Lucknow, UttarPradesh",
-      degree: "Bachelor of Engineering",
-      fieldOfStudy: "Computer Science",
-      startDate: "06/2019",
-      endDate: "Present",
+      schoolName: "",
+      schoolLocation: "",
+      degree: "",
+      fieldOfStudy: "",
+      startDate: "",
+      endDate: "",
       eduDescription: "",
     },
   ]
@@ -51,8 +51,8 @@ export class ResumeBuilderComponent implements OnInit {
   skillsDetails= [
     {
       id: 1,
-      technology: "Angular/Firebase",
-      project: "Resume Builder & Reviewer",
+      technology: "",
+      project: "",
       demoLink: "",
       repoLink: "",
       additionalDetails: "",
@@ -62,9 +62,9 @@ export class ResumeBuilderComponent implements OnInit {
   certificationDetails = [
     {
       id: 1,
-      certificationName: "Responsive Web Design Certificate",
-      certificationAuthority: "FreeCodeCamp",
-      certificationDate: "01/12/2021",
+      certificationName: "",
+      certificationAuthority: "",
+      certificationDate: "",
       certificationDescription: "",
     }
   ]
