@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-generate-resume',
@@ -17,14 +20,23 @@ export class GenerateResumeComponent implements OnInit {
 
   @Input() certificationsDetails: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log("Basic Details",this.basicDetails);
-    console.log("Work Details",this.workDetails);
-    console.log("Education details",this.educationDetails);
-    console.log("skills details",this.skillsDetails);
-    console.log("certification details",this.certificationsDetails);
+  }
+
+  async downloadResume(){
+    const element = document.getElementById('resume')!;
+    const canvas = await html2canvas(element, { scale: 2 });
+    const data = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF();
+    const imgProperties = pdf.getImageProperties(data);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+
+    pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("print.pdf");
   }
 
 }
