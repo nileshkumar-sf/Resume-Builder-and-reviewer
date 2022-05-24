@@ -29,6 +29,7 @@ import { WorkDetailsComponent } from './main-components/resume-builder/work-deta
 import { EducationDetailsComponent } from './main-components/resume-builder/education-details/education-details.component';
 import { SkillsDetailsComponent } from './main-components/resume-builder/skills-details/skills-details.component';
 import { CertificationDetailsComponent } from './main-components/resume-builder/certification-details/certification-details.component';
+import { GenerateResumeComponent } from './main-components/resume-builder/generate-resume/generate-resume.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { CertificationDetailsComponent } from './main-components/resume-builder/
     EducationDetailsComponent,
     SkillsDetailsComponent,
     CertificationDetailsComponent,
+    GenerateResumeComponent,
   ],
   imports: [
     BrowserModule,

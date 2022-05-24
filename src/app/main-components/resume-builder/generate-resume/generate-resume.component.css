@@ -1,0 +1,88 @@
+.download-details {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .download-details h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  .generate-resume-container {
+    max-width: 900px;
+    min-width: 900px;
+    margin: 0 auto;
+    border: 1px solid black;
+    min-height: 100vh;
+    background-color: #fff;
+    color: black;
+  }
+  
+  .main-resume {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    padding: 2rem;
+    font-size: 12pt;
+  }
+  
+  .main-resume h1 {
+    margin: 0;
+    /* font-size: 18pt; */
+  }
+  
+  .main-resume h2 {
+    margin: 0;
+    font-size: 15pt;
+    border-bottom: 1px solid black;
+  }
+  
+  .main-resume .links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .links-right a {
+    margin-left: 12pt;
+  }
+  
+  .experience-section,
+  .education-section,
+  .project-section
+  .certification-section {
+    margin-top: 8pt;
+  }
+  
+  .experience-item,
+  .education-item,
+  .project-item,
+  .certification-item {
+    margin-top: 6pt;
+  }
+  
+  .experience-item-top,
+  .education-item-top,
+  .project-item-top,
+  .certification-item-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .experience-item-middle,
+  .education-item-middle
+  .project-item-middle
+  .certification-item-middle {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .experience-item-body,
+  .education-item-body,
+  .project-item-body,
+  .certification-item-body {
+    margin-top: 2pt;
+  }
+  

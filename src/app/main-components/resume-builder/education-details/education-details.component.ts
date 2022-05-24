@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class EducationDetailsComponent implements OnInit {
 
   @Input() educationDetails: any;
+  @Input()
+  educationDetailsLength!: number;
 
   @Output() educationDetailsChange = new EventEmitter<any>();
 
@@ -16,12 +18,13 @@ export class EducationDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEducationDetailsChange(educationDetails: any) {
-    this.educationDetailsChange.emit(educationDetails);
+  onEducationDetailChange(educationDetail: any) {
+    this.educationDetailsChange.emit(educationDetail);
   }
 
-  onSubmit() {
-    this.onEducationDetailsChange(this.educationDetails);
+  onEducationDetailsSubmit() {
+    this.onEducationDetailChange(this.educationDetails);
+    window.scrollTo(0, 0);
   }
 
 }

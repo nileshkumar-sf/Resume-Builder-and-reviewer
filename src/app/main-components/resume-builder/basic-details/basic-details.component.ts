@@ -21,12 +21,13 @@ export class BasicDetailsComponent implements OnInit {
   }
 
   onBasicDetailsSubmit() {
-    if (this.basicDetails.firstName && this.basicDetails.lastName && this.basicDetails.profession && this.basicDetails.city && this.basicDetails.country && this.basicDetails.pincode && this.basicDetails.phone && this.basicDetails.email) {
+    // if (this.basicDetails.firstName && this.basicDetails.lastName && this.basicDetails.profession && this.basicDetails.city && this.basicDetails.country && this.basicDetails.pincode && this.basicDetails.phone && this.basicDetails.email) {
       this.onBasicDetailsChange(this.basicDetails);
-    }
-    else {
-      alert("Please fill all the required details");
-    }
+    // }
+    // else {
+      // alert("Please fill all the required details");
+    // }
+    window.scrollTo(0, 0);
   }
 
 }

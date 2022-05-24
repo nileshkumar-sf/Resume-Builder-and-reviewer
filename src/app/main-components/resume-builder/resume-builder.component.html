@@ -3,13 +3,68 @@
   [(basicDetails)]="basicDetails"
   (basicDetailsChange)="basicDetailsChange($event)"
 ></app-basic-details>
-<div class="educationDetails" *ngIf="showEducationDetails">
+<div class="education-details" *ngIf="showEducationDetails">
+  <h2>Education Details</h2>
   <app-education-details
-    [(educationDetails)]="educationDetails"
+    *ngFor="let item of educationDetails"
+    [(educationDetails)]="educationDetails[item.id - 1]"
+    [educationDetailsLength]="educationDetails.length"
     (educationDetailsChange)="educationDetailsChange($event)"
   ></app-education-details>
   <div class="add-and-delete-buttons">
-    <button type="add-new-section" onClick="">Add a new section</button>
-    <button type="add-new-section" onClick="">Delete the last section</button>
+    <button type="add-new-section" (click)="addEducationDetail()">Add a new section</button>
+    <button type="add-new-section" (click)="deleteEducationDetail()">Delete the last section</button>
   </div>
+</div>
+<div class="work-details" *ngIf="showWorkDetails">
+  <h2>Work Details</h2>
+  <app-work-details
+    *ngFor="let item of workDetails"
+    [(workDetails)]="workDetails[item.id - 1]"
+    [workDetailsLength]="workDetails.length"
+    (workDetailsChange)="workDetailsChange($event)"
+  ></app-work-details>
+  <div class="add-and-delete-buttons">
+    <button type="add-new-section" (click)="addWorkDetail()">Add a new section</button>
+    <button type="add-new-section" (click)="deleteWorkDetail()">Delete the last section</button>
+  </div>
+</div>
+<!-- <button (click)="logEv()">Logggg</button> -->
+
+<div class="skills-details" *ngIf="showSkillsDetails">
+  <h2>Skills Details</h2>
+  <app-skills-details
+    *ngFor="let item of skillsDetails"
+    [(skillsDetails)]="skillsDetails[item.id - 1]"
+    [skillsDetailsLength]="skillsDetails.length"
+    (skillsDetailsChange)="skillsDetailsChange($event)"
+  ></app-skills-details>
+  <div class="add-and-delete-buttons">
+    <button type="add-new-section" (click)="addSkillsDetail()">Add a new section</button>
+    <button type="add-new-section" (click)="deleteSkillsDetail()">Delete the last section</button>
+  </div>
+</div>
+
+
+<div class="certifications-details" *ngIf="showCerificationDetails">
+  <h2>Certification Details</h2>
+  <app-certification-details
+    *ngFor="let item of certificationDetails"
+    [(certificationsDetails)]="certificationDetails[item.id - 1]"
+    [certificationsDetailsLength]="certificationDetails.length"
+    (certificationsDetailsChange)="certificationDetailsChange($event)"
+  ></app-certification-details>
+  <div class="add-and-delete-buttons">
+    <button type="add-new-section" (click)="addCertificationDetail()">Add a new section</button>
+    <button type="add-new-section" (click)="deleteCertificationDetail()">Delete the last section</button>
+  </div>
+</div>
+<div class="generate-resume" *ngIf="generateResume">
+  <app-generate-resume
+    [basicDetails]="basicDetails"
+    [educationDetails]="educationDetails"
+    [workDetails]="workDetails"
+    [skillsDetails]="skillsDetails"
+    [certificationsDetails]="certificationDetails"
+  ></app-generate-resume>
 </div>

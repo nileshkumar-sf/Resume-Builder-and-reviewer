@@ -1,12 +1,15 @@
 <div class="common-section education-section">
   <div class="common-container">
     <div class="form-container">
-      <h2>Education Details</h2>
       <form>
-          <section>
-            <!-- <pre>{{educationDetails | json}}</pre> -->
+        <section>
+          <!-- <pre>{{educationDetails | json}}</pre> -->
           <div class="form-section">
+            <h2>Detail {{ educationDetails.id }}</h2>
             <div class="form_group field">
+              <label for="schoolName" class="form_label">
+                School/College Name
+              </label>
               <input
                 class="form_field"
                 placeholder="School/College Name"
@@ -16,11 +19,11 @@
                 value="{{ educationDetails.schoolName }}"
                 required
               />
-              <label for="schoolName" class="form_label">
-                School/College Name
-              </label>
             </div>
             <div class="form_group field">
+              <label for="schoolLocation" class="form_label">
+                School/College Location
+              </label>
               <input
                 class="form_field"
                 placeholder="School/College Location"
@@ -30,14 +33,9 @@
                 value="{{ educationDetails.schoolLocation }}"
                 required
               />
-              <label for="schoolLocation" class="form_label">
-                School/College Location
-              </label>
             </div>
-          </div>
-
-          <div class="form-section">
             <div class="form_group field">
+              <label for="degree" class="form_label"> Degree </label>
               <input
                 class="form_field"
                 placeholder="Degree"
@@ -48,11 +46,11 @@
                 [(ngModel)]="educationDetails.degree"
                 required
               />
-              <label for="degree" class="form_label">
-                Degree
-              </label>
             </div>
             <div class="form_group field">
+              <label for="fieldOfStudy" class="form_label">
+                Field Of Study
+              </label>
               <input
                 class="form_field"
                 placeholder="Field Of Study"
@@ -62,14 +60,9 @@
                 value="{{ educationDetails.fieldOfStudy }}"
                 required
               />
-              <label for="fieldOfStudy" class="form_label">
-                Field Of Study
-              </label>
             </div>
-          </div>
-
-          <div class="form-section">
             <div class="form_group field">
+              <label for="startDate" class="form_label"> Start Date </label>
               <input
                 class="form_field"
                 placeholder="Start Date"
@@ -79,11 +72,9 @@
                 value="{{ educationDetails.startDate }}"
                 required
               />
-              <label for="startDate" class="form_label">
-                Start Date
-              </label>
             </div>
             <div class="form_group field">
+              <label for="endDate" class="form_label"> End Date </label>
               <input
                 class="form_field"
                 placeholder="End Date"
@@ -92,18 +83,28 @@
                 value="{{ educationDetails.endDate }}"
                 [(ngModel)]="educationDetails.endDate"
               />
-              <label for="endDate" class="form_label">
-                End Date
-              </label>
             </div>
+            <textarea
+              placeholder="Add a description (optional)"
+              rows="{6}"
+              name="eduDescription"
+              value="{{ educationDetails.eduDescription }}"
+              [(ngModel)]="educationDetails.eduDescription"
+            ></textarea>
           </div>
-          <textarea
-            placeholder="Add a description (optional)"
-            rows="{6}"
-            name="eduDescription"
-            value="{{ educationDetails.eduDescription }}"
-            [(ngModel)]="educationDetails.eduDescription"
-          ></textarea>
+          <div
+            class="form_group field"
+            *ngIf="educationDetails.id == educationDetailsLength"
+          >
+            <button
+              class="form_button"
+              type="button"
+              (click)="onEducationDetailsSubmit()"
+            >
+              Save
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
         </section>
       </form>
     </div>
