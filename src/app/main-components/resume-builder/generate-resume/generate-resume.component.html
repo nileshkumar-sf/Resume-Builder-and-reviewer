@@ -1,0 +1,91 @@
+<!-- <p>generate-resume works!</p> -->
+
+<div class="download-details">
+  <h1>
+    Your PDF has been generated! You can see a preview of the generated resume
+    below.
+  </h1>
+  <div class="generate-section-buttons">
+    <button class="btn btn-success" id="generate-resume-btn" (click)="downloadResume()">Download</button>
+  </div>
+</div>
+<div class="generate-resume-container" id="resume">
+  <div class="main-resume" ref="">
+    <div class="top">
+      <h1>{{ basicDetails.firstName }}&nbsp;{{ basicDetails.lastName }}</h1>
+      <div class="links">
+        <div class="links-left">
+          {{ basicDetails.email }} | {{ basicDetails.phone }} |
+          {{ basicDetails.city }} | {{ basicDetails.country }}
+        </div>
+        <div class="links-right">
+          <a href="{{ basicDetails.linkedin }}">LinkedIn</a>
+          <a href="{{ basicDetails.github }}">Github</a>
+          <a href="{{ basicDetails.twitter }}">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="experience-section">
+      <h2 class="heading">Experience</h2>
+      
+      <div class="experience-item" *ngFor="let item of workDetails">
+        <div class="experience-item-top">
+          <div>{{item.employer}}</div>
+          <div>{{item.startDate}} - {{item.endDate}}</div>
+        </div>
+        <div className="experience-item-middle">
+          <div>{{item.jobTitle}}</div>
+          <div>{{item.city}}, {{item.country}}</div>
+        </div>
+        <div className="experience-item-body">{{item.jobDescription}}</div>
+      </div>
+
+    </div>
+    <div class="education-section">
+      <h2 class="heading">Education</h2>
+      
+      <div class="education-item" *ngFor="let item of educationDetails">
+        <div class="education-item-top">
+          <div>{{item.schoolName}}</div>
+          <div>{{item.startDate}} - {{item.endDate}}</div>
+        </div>
+        <div class="education-item-middle">
+          <div>{{item.degree}} ({{item.fieldOfStudy}})</div>
+          <div>{{item.schoolLocation}}</div>
+        </div>
+        <div class="education-item-body">{{item.eduDescription}}</div>
+      </div>
+
+    </div>
+    <div class="project-section">
+      <h2 class="heading">Projects</h2>
+      
+      <div class="project-item" *ngFor="let item of skillsDetails">
+        <div class="project-item-top">
+          <div>{{item.project}}</div>
+          <div>{{item.technology}}</div>
+        </div>
+        <div class="project-item-middle">
+          <a href="{{item.demoLink}}">Demo</a>&nbsp;
+          <a href="{{item.repoLink}}">Source Code</a>
+        </div>
+        <div class="project-item-body">
+          {{item.additionalDetails}}
+        </div>
+      </div>
+    </div>
+    <div class="certification-section">
+      <h2 class="heading">Certifications</h2>
+      
+      <div class="certification-item" *ngFor="let item of certificationsDetails">
+        <div class="certification-item-top">
+          <div>{{item.certificationName}}</div>
+          <div>{{item.certificationAuthority}}</div>
+        </div>
+        <div class="certification-item-middle">
+          <div>{{item.certificationDate}}</div>
+        </div>
+        <div class="skills-item-body">{{item.certificationDescription}}</div>
+      </div>
+  </div>
+</div>

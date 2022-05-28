@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
 }
 
 .panel-heading {
@@ -20,3 +19,35 @@
 .panel-heading .go-back {
     float: left;
 }
+
+.add-and-delete-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+    padding: 20px;
+}
+
+.add-and-delete-buttons button {
+    background-color: #4CAF50;
+    color: var(--color-primary);
+    padding: 10px;
+    margin: 10px;
+    min-width: fit-content;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: max(1.2vw, 0.9rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+} 

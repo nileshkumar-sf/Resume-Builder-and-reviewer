@@ -13,3 +13,9 @@
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
+
+@media screen and (max-width: 490px) {
+    .navbar .navbar-title a h2 {
+        font-size: max(2vw, 20px);
+    }
+}

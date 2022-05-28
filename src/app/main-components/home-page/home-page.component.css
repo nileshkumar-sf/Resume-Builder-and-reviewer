@@ -1,10 +1,10 @@
 .row {
-    top: 0;
+    /* top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     margin: auto;
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,17 +24,19 @@
     align-content: center;
     align-self: center;
     border-radius: 3vw;
-    max-height: 45%;
+    max-width: fit-content;
+    /* max-height: 45%;
     max-width: 30%;
     min-height: 45%;
-    min-width: 60%;
+    min-width: 60%; */
 }
 
 .logo-container img {
-    max-width: calc(100% - 20px);
+    /* max-width: calc(100% - 20px);
     max-height: calc(100% - 20px);
     min-width: calc(100% - 20px);
-    min-height: calc(100% - 20px);
+    min-height: calc(100% - 20px); */
+    max-width: 80%;
 }
 
 .btn-container {

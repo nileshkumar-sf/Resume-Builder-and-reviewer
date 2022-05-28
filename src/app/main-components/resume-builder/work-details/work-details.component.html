@@ -1,0 +1,88 @@
+<div class="form-section">
+  <h2> Detail {{workDetails.id}}</h2>
+  <div class="form_group field">
+    <label for="jobTitle" class="form_label"> Job Title </label>
+    <input
+      class="form_field"
+      placeholder="Job Title"
+      name="jobTitle"
+      id="jobTitle"
+      [(ngModel)]="workDetails.jobTitle"
+      value="{{ workDetails.jobTitle }}"
+      required
+    />
+  </div>
+  <div class="form_group field">
+    <label for="employer" class="form_label"> Employer </label>
+    <input
+      class="form_field"
+      placeholder="Employer"
+      name="employer"
+      id="employer"
+      [(ngModel)]="workDetails.employer"
+      value="{{ workDetails.employer }}"
+      required
+    />
+  </div>
+</div>
+
+<div class="form-section">
+  <div class="form_group field">
+    <label for="city" class="form_label"> City </label>
+    <input
+      class="form_field"
+      placeholder="City"
+      name="city"
+      id="city"
+      [(ngModel)]="workDetails.city"
+      value="{{ workDetails.city }}"
+      required
+    />
+  </div>
+  <div class="form_group field">
+    <label for="country" class="form_label"> Country </label>
+    <input
+      class="form_field"
+      placeholder="Country"
+      name="country"
+      id="country"
+      [(ngModel)]="workDetails.country"
+      value="{{ workDetails.country }}"
+      required
+    />
+  </div>
+</div>
+
+<div class="form-section">
+  <div class="form_group field">
+    <label for="startDate" class="form_label"> Start Date </label>
+    <input
+      class="form_field"
+      placeholder="Start Date"
+      name="startDate"
+      id="startDate"
+      [(ngModel)]="workDetails.startDate"
+      value="{{ workDetails.startDate }}"
+      required
+    />
+  </div>
+  <div class="form_group field">
+    <label for="endDate" class="form_label"> End Date </label>
+    <input
+      class="form_field"
+      placeholder="End Date"
+      name="endDate"
+      id="endDate"
+      [(ngModel)]="workDetails.endDate"
+      value="{{ workDetails.endDate }}"
+      required
+    />
+  </div>
+
+  <div class="form_group field" *ngIf="workDetails.id == workDetailsLength">
+    <button class="form_button" type="button" (click)="onWorkDetailsSubmit()">
+      Save
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>

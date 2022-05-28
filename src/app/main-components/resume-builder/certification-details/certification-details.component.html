@@ -1,0 +1,68 @@
+<section>
+  <div class="form-section">
+      <h2>Detail {{certificationsDetails.id}}</h2>
+    <div class="form_group field">
+        <label for="certificateName" class="form_label">
+          Achievement / Certification
+        </label>
+      <input
+        class="form_field"
+        placeholder="Achievement / Certification"
+        name="certificationName"
+        id="certificationName"
+        type="text"
+        [(ngModel)]="certificationsDetails.certificationName"
+        value="{{ certificationsDetails.certificationName }}"
+        required
+      />
+    </div>
+    <div class="form_group field">
+        <label for="certifyingOrg" class="form_label">
+          Certifying Organisation (Optional)
+        </label>
+      <input
+        class="form_field"
+        placeholder="Certifying Authority"
+        name="certifyingAuthority"
+        id="certifyingAuthority"
+        type="text"
+        [(ngModel)]="certificationsDetails.certificationAuthority"
+        value="{{ certificationsDetails.certificationAuthority }}"
+        required
+      />
+    </div>
+    <div class="form_group field">
+        <label for="certificationDate" class="form_label">
+          Certification Date
+        </label>
+      <input
+        class="form_field"
+        placeholder="Certification Date"
+        name="certificationDate"
+        id="certificationDate"
+        type="date"
+        [(ngModel)]="certificationsDetails.certificationDate"
+        value="{{ certificationsDetails.certificationDate }}"
+        required
+      />
+    </div>
+    <div class="form_group field">
+        <textarea
+          class="form_field"
+          placeholder="Certification Description (Optional)"
+          name="certificationDescription"
+          id="certificationDescription"
+          type="text"
+          [(ngModel)]="certificationsDetails.certificationDescription"
+          value="{{ certificationsDetails.certificationDescription }}"
+          required>
+        </textarea>
+    </div>
+    <div class="form_group field" *ngIf="certificationsDetails.id == certificationsDetailsLength">
+        <button class="form_button" type="button" (click)="onCertificationsDetailsSubmit()">
+          Generate Resume
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+  </div>
+</section>

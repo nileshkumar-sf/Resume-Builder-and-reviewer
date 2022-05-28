@@ -1,0 +1,80 @@
+<!-- <p>skills-details works!</p> -->
+
+<section>
+  <div class="form-section">
+    <h2>Detail {{ skillsDetails.id }}</h2>
+    <div class="form_group field">
+      <label for="project" class="form_label"> Project Name </label>
+      <input
+        class="form_field"
+        placeholder="Project Name"
+        name="project"
+        id="project"
+        type="text"
+        [(ngModel)]="skillsDetails.project"
+        value="{{ skillsDetails.project }}"
+        required
+      />
+    </div>
+    <div class="form_group field">
+      <label for="technology" class="form_label">
+        Technologies / Frameworks used
+      </label>
+      <input
+        class="form_field"
+        placeholder="Technologies / Frameworks used"
+        name="technology"
+        id="technology"
+        value="{{ skillsDetails.technology }}"
+        type="text"
+        [(ngModel)]="skillsDetails.technology"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="form_group field">
+      <label for="demoLink" class="form_label"> Demo Link (Optional) </label>
+      <input
+        class="form_field"
+        placeholder="Demo Link (Optional)"
+        name="demoLink"
+        id="demoLink"
+        value="{{ skillsDetails.demoLink }}"
+        type="text"
+        [(ngModel)]="skillsDetails.demoLink"
+      />
+    </div>
+    <div class="form_group field">
+      <label for="repoLink" class="form_label">
+        Repository Link (Optional)"
+      </label>
+      <input
+        class="form_field"
+        placeholder="Repository Link (Optional)"
+        name="repoLink"
+        id="repoLink"
+        value="{{ skillsDetails.repoLink }}"
+        type="text"
+        [(ngModel)]="skillsDetails.repoLink"
+      />
+    </div>
+    <div class="form_group field">
+        <textarea
+          placeholder="Add more details about your project (optional)"
+          rows="{5}"
+          name="additionalDetails"
+          value="{{ skillsDetails.additionalDetails }}"
+          type="text"
+          [(ngModel)]="skillsDetails.additionalDetails"
+        ></textarea>
+      </div>
+      <div class="form_group field" *ngIf="skillsDetails.id == skillsDetailsLength">
+        <button class="form_button" type="button" (click)="onSkillsDetailsSubmit()">
+          Save
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+  </div>
+</section>
