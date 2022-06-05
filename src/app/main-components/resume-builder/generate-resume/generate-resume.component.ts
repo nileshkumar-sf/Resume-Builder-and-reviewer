@@ -25,18 +25,24 @@ export class GenerateResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async downloadResume(){
-    const element = document.getElementById('resume')!;
-    const canvas = await html2canvas(element, { scale: 2 });
-    const data = canvas.toDataURL("image/png");
+  async downloadResume() {
+    const element = document.getElementById('resume')!.innerHTML;
+    // const canvas = await html2canvas(element, { scale: 2 });
+    // const data = canvas.toDataURL("image/png");
 
-    const pdf = new jsPDF();
-    const imgProperties = pdf.getImageProperties(data);
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+    // const pdf = new jsPDF();
+    // const imgProperties = pdf.getImageProperties(data);
+    // const pdfWidth = pdf.internal.pageSize.getWidth();
+    // const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
 
-    pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save(this.basicDetails.firstName+  "_" +this.basicDetails.lastName +  "_" + "Resume.pdf");
+    // pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
+    // pdf.save(this.basicDetails.firstName+  "_" +this.basicDetails.lastName +  "_" + "Resume.pdf");
+
+    var prnt = window.open('', '', 'height=500, width=500')!;
+    prnt.document.write(element);
+    prnt.document.close();
+    prnt.print();
+    prnt.close();
   }
 
 }
